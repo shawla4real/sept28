@@ -1,5 +1,6 @@
 - hosts: all
   become: yes
+  remote_user: ansible
   tasks:
     - name: create directory root nduka
       file:
