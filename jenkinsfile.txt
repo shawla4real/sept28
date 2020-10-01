@@ -1,0 +1,16 @@
+pipeline {
+    agent any
+    stages{
+         stage('SCM Checkout'){
+             steps{
+             git 'https://github.com/shawla4real/sept28.git'
+                    }
+            }
+         stage('execute playbook'){
+             steps{
+             ansiblePlaybook become: true, becomeUser: 'ansible', credentialsId: '7200cab5-e753-415c-9a7a-a758795080b3', installation: 'ansible', inventory: 'hosts', playbook: 'createjenkins.yml'
+                    }
+            }
+     }
+}
+    
