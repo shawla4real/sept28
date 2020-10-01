@@ -1,4 +1,4 @@
-- hosts: localhost
+- hosts: dev
   become: yes
   remote_user: ansible
   become_method: sudo
