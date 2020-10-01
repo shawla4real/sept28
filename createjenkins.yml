@@ -1,6 +1,7 @@
 - hosts: localhost
   become: yes
   remote_user: ansible
+  become _method: sudo
   tasks:
     - name: create directory root nduka
       file:
